@@ -116,3 +116,16 @@ form button:hover {
   font-size: 2rem;
   cursor:pointer;
 }
+
+.slide-up{
+  animation: slide-up ease .8s;
+}
+
+@keyframes slide-up{
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-30rem);
+  }
+}
