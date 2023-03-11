@@ -1,0 +1,93 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+}
+
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#game-board {
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 2px 2px 5px #999;
+}
+
+.player-info,
+.city-info,
+.player-actions {
+  margin-bottom: 20px;
+}
+
+.player-info h2,
+.city-info h2,
+.player-actions h2 {
+  margin-top: 0;
+}
+
+.city-info ul,
+.player-actions form {
+  margin-left: 20px;
+}
+
+#game-controls {
+  width: 100%;
+  max-width: 400px;
+  background-color: #f1f1f1;
+  padding: 20px;
+  box-shadow: 2px 2px 5px #999;
+}
+
+#high-scores {
+  padding-left: 20px;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  main {
+    flex-wrap: nowrap;
+  }
+
+  .player-info,
+  .city-info,
+  .player-actions {
+    margin-bottom: 0;
+  }
+
+  .player-info,
+  .city-info {
+    width: 50%;
+  }
+
+  .player-actions {
+    width: 100%;
+  }
+
+  #game-controls {
+    margin-left: 20px;
+  }
+}
