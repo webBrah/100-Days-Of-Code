@@ -58,45 +58,46 @@ function showNotes() {
       <p class="note-text">${element.text}</p>
     </div>
         `;
-  })
-  let notesElm = document.getElementById("notes");
-  
+  });
+  let notesElm = document.getElementById('notes');
 
   if (notesObj.length != 0) {
     notesElm.innerHTML = html;
   } else {
-    notesElm.innerHTML = "No notes added. Please add a note.";
+    notesElm.innerHTML = 'No notes added. Please add a note.';
   }
-
 }
-
 
 // DELETE A SINGLE NOTE
 function deleteNote(index) {
-    let confirmDel = confirm("Delete this note")
-    if (confirmDel) {
-        getNotes()
-        notesObj.splice(index, 1)
-        localStorage.setItem("notes", JSON.stringify(notesObj))
-        showNotes();
-    }
+  let confirmDel = confirm('Delete this note');
+  if (confirmDel) {
+    getNotes();
+    notesObj.splice(index, 1);
+    localStorage.setItem('notes', JSON.stringify(notesObj));
+    showNotes();
+  }
 }
 
 // DELETE ALL NOTES
-clear.addEventListener("click", () => {
-    localStorage.clear();
-    showNotes();
+clear.addEventListener('click', () => {
+  localStorage.clear();
+  showNotes();
 });
 
 // EDIT NOTE
 function editNote(index) {
-    if (noteTitle.value !== "" || noteText.value !== "") {
-        return alert("Please clear the form before editing")
-    }
-    getNotes()
+  if (noteTitle.value !== '' || noteText.value !== '') {
+    return alert('Please clear the form before editing');
+  }
+  getNotes();
 
-    noteTitle.value = notesObj[index].title
-    noteText.value = notesObj[index].text
+  noteTitle.value = notesObj[index].title;
+  noteText.value = notesObj[index].text;
+
+  notesObj.splice(index, 1);
+  localStorage.setItem('notes', JSON.stringify(notesObj));
+  showNotes();
 }
 
 showNotes();
