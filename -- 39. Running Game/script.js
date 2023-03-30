@@ -28,3 +28,5 @@ const hero = document.querySelector('.hero'),
         alert("Game over. Press spacebar to start");
     }
   }, 10);
+
+  // Test
