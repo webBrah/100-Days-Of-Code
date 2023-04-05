@@ -47,3 +47,7 @@ img {
   column-gap: 2rem;
 }
 
+.hide {
+  display: none;
+}
+
